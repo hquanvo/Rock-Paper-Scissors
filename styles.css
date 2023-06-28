@@ -1,0 +1,46 @@
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;;
+}
+
+#container {
+    aspect-ratio: 4/3;
+    border: solid 4px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    margin: auto;
+    width: 600px;
+    height: auto;
+}
+
+#content {
+    border: solid 2px;
+    display: flex;
+    flex: auto;
+    flex-grow: 3;
+}
+
+#button-container {
+    display: flex;
+    flex: auto;
+    justify-content: space-evenly;
+    padding: 8px;
+}
+
+#rock-btn, #paper-btn, #scissors-btn {
+    background-color: #3882F6;
+    border: 4px;
+    border-style: solid;
+    border-color: black;
+    color:#F9FAF8;
+    display: flex;
+    flex: 1 1 0px;
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+}

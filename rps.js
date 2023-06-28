@@ -30,11 +30,13 @@ function getPlayerChoice() {
 function playRound(playerChoice, cpuChoice) {
     if (playerChoice === cpuChoice) return "It's a draw!";
     else if ((playerChoice === "rock" && cpuChoice === "paper") || 
-    (playerChoice === "paper" && cpuChoice === "scissors") || (playerChoice === "scissors" && cpuChoice === "rock")) {
+    (playerChoice === "paper" && cpuChoice === "scissors") || 
+    (playerChoice === "scissors" && cpuChoice === "rock")) {
         cpuScore++;
         return losingMessage;
     } else if ((playerChoice === "rock" && cpuChoice === "scissors") || 
-    (playerChoice === "paper" && cpuChoice === "rock") || (playerChoice === "scissors" && cpuChoice === "paper")) {
+    (playerChoice === "paper" && cpuChoice === "rock") || 
+    (playerChoice === "scissors" && cpuChoice === "paper")) {
         playerScore++;
         return winningMessage;
     } else return "That's not a valid input!";
@@ -57,4 +59,5 @@ function game() {
     : alert("It's a draw!"));
 }
 
-game();
+// disabling prompt
+// game();
