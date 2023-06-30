@@ -42,6 +42,11 @@ function playRound(playerChoice, cpuChoice) {
     } else return "That's not a valid input!";
 }
 
+function handlePlayer() {
+    const choice = document.getElementById("choice");
+    choice.innerHTML = "Welcome to Rock Paper Scissors!";
+}
+
 function game() {
     let i = 0;
     cpuScore = 0;
@@ -59,5 +64,6 @@ function game() {
     : alert("It's a draw!"));
 }
 
+handlePlayer();
 // disabling prompt
 // game();

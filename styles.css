@@ -2,7 +2,7 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;;
+    justify-content: center;
 }
 
 #container {
@@ -12,15 +12,29 @@ body {
     flex-direction: column;
     flex: 1 1 auto;
     margin: auto;
+    padding: 8px;
     width: 600px;
     height: auto;
 }
 
 #content {
     border: solid 2px;
-    display: flex;
-    flex: auto;
-    flex-grow: 3;
+    height: 300px;
+}
+
+#display {
+    border-bottom: solid 2px;
+    /* background-color: red; */
+    height: 200px;
+    width: auto;
+    flex: 1 1 600px;
+}
+
+#choice {
+    /* background-color: blue; */
+    flex: 1 1 600px;
+    height: 100px;
+    width: auto;
 }
 
 #button-container {
@@ -43,4 +57,18 @@ body {
     justify-content: center;
     align-items: center;
     margin: 4px;
+}
+
+#external-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 620px;
+    margin-top: 6px;
+}
+
+a:visited {
+    color: #040406;
+}
+a:hover {
+    color:#3882F6;
 }
