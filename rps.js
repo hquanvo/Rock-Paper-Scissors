@@ -42,9 +42,17 @@ function playRound(playerChoice, cpuChoice) {
     } else return "That's not a valid input!";
 }
 
-function handlePlayer() {
+function initDisplay() {
+    const display = document.getElementById("display");
+    const playerDiv = document.createElement("div");
+    const cpuDiv = document.createElement("div");
+}
+
+function startUp() {
     const choice = document.getElementById("choice");
-    choice.innerHTML = "Welcome to Rock Paper Scissors!";
+    const para = document.createElement('p');
+    para.textContent = "Welcome to Rock Paper Scissors! Play against a computer by clicking on any of the button below. First to 5 win!";
+    choice.appendChild(para);
 }
 
 function game() {
@@ -64,6 +72,6 @@ function game() {
     : alert("It's a draw!"));
 }
 
-handlePlayer();
+startUp();
 // disabling prompt
 // game();
