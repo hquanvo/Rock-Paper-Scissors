@@ -1,0 +1,98 @@
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:  #1F2937;
+    font-family: roboto, 'Times New Roman', Times, serif;
+    color:#F9FAF8;
+}
+
+#container {
+    aspect-ratio: 4/3;
+    border: solid 4px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    margin: auto;
+    padding: 8px;
+    width: 600px;
+    height: auto;
+}
+
+#content {
+    border: solid 2px;
+    height: 300px;
+}
+
+#display {
+    border-bottom: solid 2px;
+    /* background-color: red; */
+    height: 200px;
+    width: auto;
+    display: flex;
+    flex: 1 1 600px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div.score {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    font-size: large;
+    justify-content: center;
+    align-items: center;
+}
+
+div.score#player {
+    border-right: solid 2px;
+}
+
+#message {
+    /* background-color: blue; */
+    flex: 1 1 600px;
+    height: 100px;
+    width: auto;
+    padding: 4px;
+}
+
+#button-container {
+    display: flex;
+    flex: auto;
+    justify-content: space-evenly;
+    padding: 8px;
+}
+
+button {
+    background-color: #314158;
+    border: 4px;
+    border-style: solid;
+    border-color: #F9FAF8;
+    color:#F9FAF8;
+    display: flex;
+    flex: 1 1 0px;
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+}
+
+button:hover {
+    background-color: #435979;
+}
+
+#external-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 620px;
+    margin-top: 6px;
+}
+
+a:visited {
+    color: #F9FAF8;
+}
+a:hover {
+    color:#3882F6;
+}
