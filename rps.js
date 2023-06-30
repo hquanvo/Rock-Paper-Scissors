@@ -55,8 +55,8 @@ function startUp() {
     updateScoreBoard();
 
     rock.addEventListener('click', () => {handleClick('rock')});
-    paper.addEventListener('click', () => {console.log("PAPER")});
-    scissors.addEventListener('click', () => {console.log("SCISSORS")});
+    paper.addEventListener('click', () => {handleClick('paper')});
+    scissors.addEventListener('click', () => {handleClick('scissors')});
 }
 
 function updateScoreBoard() {
@@ -79,16 +79,42 @@ function handleClick(playerChoice) {
 }
 
 function handleGameOver() {
+    const message = document.getElementById("message");
     const restartBtn = document.createElement("button");
+    const para = document.createElement("p");
+    restartBtn.id = "restart-button";
     restartBtn.textContent = "Restart";
+    para.id = "gameOver";
+    message.appendChild(para);
+    
     if (playerScore === 5) {
-        message.textContent = message.textContent + " You win! Click the restart button to try again!";
+        para.textContent = "You win! Click the restart button to try again!";
+    } else {
+        para.textContent = "Unfortunately, you lost! Click the restart button to try again!";
     }
     const container = document.querySelector("#container");
     container.appendChild(restartBtn);
     document.getElementById("rock-btn").disabled = true;
     document.getElementById("paper-btn").disabled = true;
     document.getElementById("scissors-btn").disabled = true;
+    restartBtn.addEventListener('click', handleRestart);
+}
+
+function handleRestart() {
+    const restartBtn = document.getElementById("restart-button");
+    document.getElementById("rock-btn").disabled = false;
+    document.getElementById("paper-btn").disabled = false;
+    document.getElementById("scissors-btn").disabled = false;
+    document.getElementById("container").removeChild(restartBtn);
+    document.getElementById("message").textContent = '';
+
+    const para = document.createElement('p');
+    para.textContent = "Welcome to Rock Paper Scissors! Play against a computer by clicking on any of the button below. First to 5 win!";
+    message.appendChild(para);
+
+    playerScore = 0;
+    cpuScore = 0;
+    updateScoreBoard();
 }
 
 startUp();
