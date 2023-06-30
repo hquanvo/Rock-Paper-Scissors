@@ -3,8 +3,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* background-color: #F6AC38; */
+    background-color: #0B64F0;
     font-family: roboto, 'Times New Roman', Times, serif;
+    color:#F9FAF8;
 }
 
 #container {
@@ -48,7 +49,7 @@ div.score#player {
     border-right: solid 2px;
 }
 
-#choice {
+#message {
     /* background-color: blue; */
     flex: 1 1 600px;
     height: 100px;
@@ -63,11 +64,11 @@ div.score#player {
     padding: 8px;
 }
 
-#rock-btn, #paper-btn, #scissors-btn {
+button {
     background-color: #3882F6;
     border: 4px;
     border-style: solid;
-    border-color: black;
+    border-color: #F9FAF8;
     color:#F9FAF8;
     display: flex;
     flex: 1 1 0px;
@@ -78,6 +79,10 @@ div.score#player {
     margin: 4px;
 }
 
+button:hover {
+    background-color: #38E1F6;
+}
+
 #external-container {
     display: flex;
     justify-content: flex-end;
@@ -86,7 +91,7 @@ div.score#player {
 }
 
 a:visited {
-    color: #040406;
+    color: #F9FAF8;
 }
 a:hover {
     color:#3882F6;
